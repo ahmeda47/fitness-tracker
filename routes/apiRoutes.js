@@ -31,7 +31,7 @@ router.put("/workouts/:id", ({ body, params }, res) => {
     });
 });
 
-router.get("/workouts/api", (req, res) => {
+router.get("/workouts/range", (req, res) => {
   Workout.find()
     .then(data => {
       res.json(data);
