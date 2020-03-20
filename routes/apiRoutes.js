@@ -31,4 +31,14 @@ router.put("/workouts/:id", ({ body, params }, res) => {
     });
 });
 
+router.get("/workouts/api", (req, res) => {
+  Workout.find()
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
+
 module.exports = router;
